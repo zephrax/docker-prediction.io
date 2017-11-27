@@ -2,11 +2,12 @@
 
 ## Prediction.IO Automated Docker Build
 
-As I needed to run the Universal Recommender, the only way I got it working was using an old version. So currently there is only one branch (master) and its working with Prediction.IO v0.9.6
+This project is used to build Prediction.IO containers. I'm actively adding support for different versions.
 
 ### List of currently supported versions:
 
-* Prediction.IO v0.9.6 (master/0.9.6)
+* Prediction.IO v0.9.6 (branch 0.9.6)
+* Prediction.IO v0.11.0 (branch 0.11.0)
 
 ### How to Start
 
