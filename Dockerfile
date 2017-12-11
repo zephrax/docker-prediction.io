@@ -47,3 +47,5 @@ RUN pip install --upgrade pip && \
     pip install setuptools && \
     pip install predictionio
 
+RUN mkdir ${PIO_HOME}/log
+
