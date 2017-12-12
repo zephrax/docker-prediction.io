@@ -47,5 +47,14 @@ RUN pip install --upgrade pip && \
     pip install setuptools && \
     pip install predictionio
 
+ENV PEPE 1
+
+RUN mkdir -p /var/lib/hbase/data && \
+    mkdir -p /var/lib/elasticsearch/data && \
+    rm -rf ${PIO_HOME}/vendors/hbase-${HBASE_VERSION}/data && ln -s /var/lib/hbase/data ${PIO_HOME}/vendors/hbase-${HBASE_VERSION}/data && \
+    rm -rf ${PIO_HOME}/vendors/elasticsearch-${ELASTICSEARCH_VERSION}/data && ln -s /var/lib/elasticsearch/data ${PIO_HOME}/vendors/elasticsearch-${ELASTICSEARCH_VERSION}/data
+
 RUN mkdir ${PIO_HOME}/log
+
+VOLUME [ "/var/lib/hbase/data", "/var/lib/elasticsearch/data" ]
 
